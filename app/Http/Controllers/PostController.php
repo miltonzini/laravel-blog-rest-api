@@ -19,7 +19,7 @@ class PostController extends Controller implements HasMiddleware
 
     public function index()
     {
-        return Post::all();
+        return Post::paginate(20);
     }
 
     public function store(Request $request)
